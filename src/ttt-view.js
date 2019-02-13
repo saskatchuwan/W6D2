@@ -29,7 +29,20 @@ class View {
     $square.text(playerMark);
 
     if (this.game.isOver() === true) {
-      this.$el.append($(`<p>Congrats, ${this.game.winner()}! You won the game!</p>`));
+      const winner = this.game.winner();
+      this.$el.append($(`<p>Congrats, ${winner}! You won the game!</p>`));
+
+      let $lis = $('li');
+      for (let i = 0; i < $lis.length; i++) {
+        const $square = $lis.eq(i);
+        if ($square.text() === winner) {
+          $square.css('background-color', 'green');
+          $square.css('color', 'white');
+        } else {
+          $square.css('background-color', 'white');
+          $square.css('color', 'red');
+        }
+      }
     }
   }
 
