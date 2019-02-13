@@ -1,0 +1,29 @@
+.hanoi {
+  display: flex;
+  width: 600px;
+  height: 300px;
+  
+}
+
+#tower {
+  align-self: flex-end;
+  height: 100px;
+  width: 200px;
+  border-bottom: 10px solid black;
+  margin: 8px;
+  align-items:center;
+}
+
+#disc {
+  list-style-type: none;
+  background-color: pink;
+  height: 15px;
+  margin: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+}
